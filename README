@@ -55,7 +55,7 @@ ALERT #2: Usernames and passwords sent in-the-clear (HTTP) (username:admin,
 /*****************************************************************************
  CREDITS
 *****************************************************************************/
-This program was implemented and written by me apart from a bit of starter
+This program was implemented and written by me apart from starter
 code to read in the pcap file written by Ming Chow at Tufts University.
 
 
