@@ -1,0 +1,61 @@
+/*****************************************************************************
+* Incident Alarm
+* Author: Isabel Muste
+* Project Language: Python
+*****************************************************************************/
+
+Incident Alarm is a Python-based tool that scans pcap files for signs of 
+suspicious or malicious network activity. It identifies various network 
+incidents and reports them to help users analyze network traffic efficiently.
+
+The purpose of this assignment is to provide the user with a way to scan pcap
+files and detect concering communication in this pcap file. The program detects 
+the following incidents:
+ - NULL scan
+ - FIN scan
+ - Xmas scan
+ - Plain text username and passwords (HTTP / FTP / IMAP)
+ - Nikto scan
+ - SMB scan
+ - RDP scan
+ - VNC scan
+Any signs of this type of communication in the pcap will be reported when
+running the program with that pcap file. 
+
+This project utilizes Scapy, a powerful Python library for packet manipulation 
+and analysis, to parse and inspect pcap files.
+
+This project taught me to use scapy to detect incidents in pcap files by 
+learning about these types of incidents in depth and how they can be 
+detected. For example what ports they are on, what transport layer protocols
+they use, etc. 
+
+
+/*****************************************************************************
+ RUNNING THE PROGRAM
+*****************************************************************************/
+- Create a new environment with 'python3 -m venv env'
+- Activate the environment with 'source env/bin/activate'
+- Install scapy
+- Run the program with 'python3 alarm.py -r [pcapFile]'
+
+In this directory, three pcap files are present that can be used to run the
+program. So an example command is 'python3 alarm.py -r set3.pcap'
+
+Once the program is running, the detected incidents will be reported by way
+of printing these to the terminal. If the user wants, they can redirect this
+output to a file to get a clear overview of the incidents in this file.
+
+Some example incident alerts when running the program look like:
+ALERT #1: NULL scan is detected from 192.168.0.5 (TCP)!
+ALERT #2: Usernames and passwords sent in-the-clear (HTTP) (username:admin, 
+        password:12345)
+
+
+/*****************************************************************************
+ CREDITS
+*****************************************************************************/
+This program was implemented and written by me apart from a bit of starter
+code to read in the pcap file written by Ming Chow at Tufts University.
+
+
